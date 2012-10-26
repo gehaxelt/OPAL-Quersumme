@@ -1,0 +1,14 @@
+SIGNATURE Quersumme
+
+IMPORT Nat COMPLETELY
+IMPORT NatConv COMPLETELY
+IMPORT Denotation COMPLETELY
+
+-- Berechnet die Quersumme einer Zahl
+-- @param: Zahl
+-- @return: Quersumme der Zahl
+FUN quersumme : nat -> nat
+
+
+
+

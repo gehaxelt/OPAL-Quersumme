@@ -1,0 +1,19 @@
+IMPLEMENTATION Quersumme
+
+-- Berechnet die Quersumme einer Zahl
+-- @param: Zahl          
+-- @return: Quersumme der Zahl
+DEF quersumme == \\zahl.
+	RekQuersumme((zahl`),0)	
+
+
+-- Berechnet die Quersumme rekursiv aus einem Zahlenstring
+-- @param: Zahl als Denotation
+-- @param: Aktuelle Quersumme
+-- @return: Quersumme
+FUN RekQuersumme : denotation ** nat -> nat
+DEF RekQuersumme == \\strzahl, summe.
+	IF ( #(strzahl) > 0) THEN
+		!(slice(strzahl,0,0)) + RekQuersumme(delete(strzahl,0,0),summe)
+	ELSE summe
+	FI
